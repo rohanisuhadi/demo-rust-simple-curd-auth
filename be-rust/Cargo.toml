@@ -1,0 +1,31 @@
+[package]
+name = "crud-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1.35", features = ["full"] } # Runtime asinkron
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+dotenvy = "0.15"
+argon2 = "0.5"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.11.0", features = ["serde", "v4"] }
+
+sqlx = { version = "0.7", features = ["runtime-tokio", "tls-native-tls", "postgres", "chrono", "uuid"] }
+
+jsonwebtoken = "9.2"
+tower = "0.4"
+tower-layer = "0.3"
+tower-http = { version = "0.5", features = ["trace"] }
+http = "1"
+http-body-util = "0.1"
+bytes = "1"
+
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "time"] }
+
+url = "2.5"
+anyhow = "1.0.94"
+thiserror = "1"

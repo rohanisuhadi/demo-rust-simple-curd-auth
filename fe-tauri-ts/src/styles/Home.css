@@ -1,0 +1,220 @@
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+}
+
+.pagination-button {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    margin: 0 4px;
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        color 0.2s;
+    border-radius: 4px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pagination-button:hover:not(:disabled):not(.active) {
+    background-color: #f0f0f0;
+}
+
+.pagination-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    pointer-events: none;
+}
+
+.pagination-button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    background-color: #f7f7f7;
+}
+
+.pagination-ellipsis {
+    padding: 8px 5px;
+    margin: 0 4px;
+    color: #777;
+}
+
+/* Responsif small device (Opsional) */
+@media (max-width: 600px) {
+    .pagination-button {
+        padding: 6px 10px;
+        margin: 4px 2px; /* Lebih banyak margin vertikal saat wrap */
+        min-width: 35px;
+    }
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.user-table th,
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.user-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-responsive-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.user-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.user-table th,
+.user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.user-table thead {
+    display: table-header-group;
+}
+
+@media (max-width: 600px) {
+    .user-table {
+        border: none;
+        min-width: auto;
+    }
+
+    .user-table thead {
+        display: none;
+    }
+
+    .user-table tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 5px;
+    }
+
+    .user-table td {
+        display: block;
+        border: none;
+        text-align: right;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .user-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+    }
+
+    .user-table tr td:last-child {
+        border-bottom: none;
+    }
+
+    .user-table .action-cell {
+        display: block;
+        border: none;
+        padding: 10px;
+        position: static;
+        padding-left: 10px;
+        text-align: left;
+        width: 210px;
+    }
+
+    .user-table .action-cell::before {
+        content: none;
+    }
+
+    .user-table .action-cell {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s,
+        opacity 0.2s;
+}
+
+.btn .icon {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.btn-edit:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.btn-delete:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+}
+
+.btn:disabled,
+.btn[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
